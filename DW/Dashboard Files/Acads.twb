@@ -1,0 +1,1102 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0321.1733                               -->
+<workbook original-version='18.1' source-build='2019.1.2 (20191.19.0321.1733)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Academics' inline='true' name='federated.0jqbu3w1m1stte167emyb0x9kq5r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Academics' name='textscan.142moi21hnxk5f1a8ak6f02nodqh'>
+            <connection class='textscan' directory='D:/bits/sem2/data warehousing/MihikaDWProjct-20190421T191343Z-001/FactTablesFinal/Acads/output' filename='Academics.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.142moi21hnxk5f1a8ak6f02nodqh' name='Academics.csv' table='[Academics#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='StudentKey' ordinal='0' />
+            <column datatype='integer' name='Assignment' ordinal='1' />
+            <column datatype='integer' name='LabTest' ordinal='2' />
+            <column datatype='integer' name='Project(20)' ordinal='3' />
+            <column datatype='integer' name='Quiz(30)' ordinal='4' />
+            <column datatype='integer' name='MidTerm(20)' ordinal='5' />
+            <column datatype='integer' name='EndTerm(30)' ordinal='6' />
+            <column datatype='integer' name='Total' ordinal='7' />
+            <column datatype='integer' name='CourseId' ordinal='8' />
+            <column datatype='date' name='SemesterKey' ordinal='9' />
+            <column datatype='integer' name='ID' ordinal='10' />
+            <column datatype='integer' name='YearOfJoining' ordinal='11' />
+            <column datatype='string' name='StudentName' ordinal='12' />
+            <column datatype='string' name='Gender' ordinal='13' />
+            <column datatype='string' name='Degree' ordinal='14' />
+            <column datatype='string' name='StudId' ordinal='15' />
+            <column datatype='date' name='date_key' ordinal='16' />
+            <column datatype='date' name='date' ordinal='17' />
+            <column datatype='string' name='day_of_week' ordinal='18' />
+            <column datatype='integer' name='day_number_in_month' ordinal='19' />
+            <column datatype='integer' name='day_number_overall' ordinal='20' />
+            <column datatype='integer' name='week_number_in_year' ordinal='21' />
+            <column datatype='integer' name='week_number_overall' ordinal='22' />
+            <column datatype='string' name='Month' ordinal='23' />
+            <column datatype='integer' name='quarter' ordinal='24' />
+            <column datatype='string' name='fiscal_period' ordinal='25' />
+            <column datatype='integer' name='year' ordinal='26' />
+            <column datatype='string' name='holiday_flag' ordinal='27' />
+            <column datatype='integer' name='COURSE NO.' ordinal='28' />
+            <column datatype='date' name='COMPRE DATE' ordinal='29' />
+            <column datatype='string' name='COMPRE SESSION' ordinal='30' />
+            <column datatype='string' name='COURSE TITLE' ordinal='31' />
+            <column datatype='integer' name='CREDIT' ordinal='32' />
+            <column datatype='string' name='Instructor' ordinal='33' />
+            <column datatype='string' name='Days' ordinal='34' />
+            <column datatype='string' name='Department' ordinal='35' />
+            <column datatype='string' name='Resource Material' ordinal='36' />
+            <column datatype='string' name='Author' ordinal='37' />
+            <column datatype='string' name='Edition' ordinal='38' />
+            <column datatype='integer' name='No Of Components' ordinal='39' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StudentKey</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[StudentKey]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>StudentKey</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Assignment</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Assignment]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Assignment</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LabTest</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LabTest]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>LabTest</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Project(20)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Project(20)]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Project(20)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quiz(30)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quiz(30)]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Quiz(30)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MidTerm(20)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MidTerm(20)]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>MidTerm(20)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EndTerm(30)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EndTerm(30)]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>EndTerm(30)</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Total</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CourseId</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CourseId]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>CourseId</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SemesterKey</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[SemesterKey]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>SemesterKey</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YearOfJoining</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[YearOfJoining]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>YearOfJoining</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StudentName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StudentName]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>StudentName</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Degree</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Degree]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Degree</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StudId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StudId]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>StudId</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_key</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date_key]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>date_key</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[day_of_week]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>day_of_week</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_number_in_month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day_number_in_month]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>day_number_in_month</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_number_overall</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day_number_overall]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>day_number_overall</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>week_number_in_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[week_number_in_year]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>week_number_in_year</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>week_number_overall</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[week_number_overall]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>week_number_overall</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quarter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[quarter]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>quarter</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fiscal_period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fiscal_period]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>fiscal_period</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>holiday_flag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[holiday_flag]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>holiday_flag</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COURSE NO.</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[COURSE NO.]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>COURSE NO.</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COMPRE DATE</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[COMPRE DATE]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>COMPRE DATE</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COMPRE SESSION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COMPRE SESSION]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>COMPRE SESSION</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COURSE TITLE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COURSE TITLE]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>COURSE TITLE</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CREDIT</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CREDIT]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>CREDIT</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Instructor</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Instructor]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Instructor</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Days]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Days</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Department</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Department]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Department</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Resource Material</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Resource Material]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Resource Material</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Author</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Author]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Author</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Edition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Edition]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Edition</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>No Of Components</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[No Of Components]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>No Of Components</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Assignment]' role='measure' type='quantitative' />
+      <column caption='Compre Date' datatype='date' name='[COMPRE DATE]' role='dimension' type='ordinal' />
+      <column caption='Compre Session' datatype='string' name='[COMPRE SESSION]' role='dimension' type='nominal' />
+      <column caption='Course No.' datatype='integer' name='[COURSE NO.]' role='measure' type='quantitative' />
+      <column caption='Course Title' datatype='string' name='[COURSE TITLE]' role='dimension' type='nominal' />
+      <column caption='Credit' datatype='integer' name='[CREDIT]' role='measure' type='quantitative' />
+      <column caption='Course Id' datatype='integer' name='[CourseId]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[EndTerm(30)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column caption='Lab Test' datatype='integer' name='[LabTest]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[MidTerm(20)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Project(20)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Quiz(30)]' role='measure' type='quantitative' />
+      <column caption='Semester Key' datatype='date' name='[SemesterKey]' role='dimension' type='ordinal' />
+      <column caption='Stud Id' datatype='string' name='[StudId]' role='dimension' type='nominal' />
+      <column caption='Student Key' datatype='integer' name='[StudentKey]' role='dimension' type='ordinal' />
+      <column caption='Student Name' datatype='string' name='[StudentName]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Total]' role='measure' type='quantitative' />
+      <column caption='Year Of Joining' datatype='integer' name='[YearOfJoining]' role='dimension' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Date Key' datatype='date' name='[date_key]' role='dimension' type='ordinal' />
+      <column caption='Day Number In Month' datatype='integer' name='[day_number_in_month]' role='dimension' type='quantitative' />
+      <column caption='Day Number Overall' datatype='integer' name='[day_number_overall]' role='dimension' type='quantitative' />
+      <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+      <column caption='Fiscal Period' datatype='string' name='[fiscal_period]' role='dimension' type='nominal' />
+      <column caption='Holiday Flag' datatype='string' name='[holiday_flag]' role='dimension' type='nominal' />
+      <column caption='Quarter' datatype='integer' name='[quarter]' role='dimension' type='quantitative' />
+      <column caption='Week Number In Year' datatype='integer' name='[week_number_in_year]' role='dimension' type='quantitative' />
+      <column caption='Week Number Overall' datatype='integer' name='[week_number_overall]' role='dimension' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[Assignment]' derivation='Avg' name='[avg:Assignment:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[EndTerm(30)]' derivation='Avg' name='[avg:EndTerm(30):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[LabTest]' derivation='Avg' name='[avg:LabTest:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MidTerm(20)]' derivation='Avg' name='[avg:MidTerm(20):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Project(20)]' derivation='Avg' name='[avg:Project(20):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Quiz(30)]' derivation='Avg' name='[avg:Quiz(30):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total]' derivation='Avg' name='[avg:Total:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[EndTerm(30)]' derivation='Sum' name='[sum:EndTerm(30):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MidTerm(20)]' derivation='Sum' name='[sum:MidTerm(20):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Project(20)]' derivation='Sum' name='[sum:Project(20):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Quiz(30)]' derivation='Sum' name='[sum:Quiz(30):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total]' derivation='Sum' name='[sum:Total:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.472998' measure-ordering='alphabetic' measure-percentage='0.527002' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:LabTest:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Project(20):qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[sum:Project(20):qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:EndTerm(30):qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[sum:EndTerm(30):qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Total:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[sum:Total:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Assignment:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Quiz(30):qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[sum:Quiz(30):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:MidTerm(20):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[sum:MidTerm(20):qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Sheet 1' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Measure Names' />
+        <param name='target' value='Sheet 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>Performance of students by courses by evaluatives</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Academics' name='federated.0jqbu3w1m1stte167emyb0x9kq5r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jqbu3w1m1stte167emyb0x9kq5r'>
+            <column datatype='integer' name='[Assignment]' role='measure' type='quantitative' />
+            <column caption='Course Id' datatype='integer' name='[CourseId]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[EndTerm(30)]' role='measure' type='quantitative' />
+            <column caption='Lab Test' datatype='integer' name='[LabTest]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[MidTerm(20)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Project(20)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Quiz(30)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Total]' role='measure' type='quantitative' />
+            <column-instance column='[Assignment]' derivation='Avg' name='[avg:Assignment:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[EndTerm(30)]' derivation='Avg' name='[avg:EndTerm(30):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[LabTest]' derivation='Avg' name='[avg:LabTest:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[MidTerm(20)]' derivation='Avg' name='[avg:MidTerm(20):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Project(20)]' derivation='Avg' name='[avg:Project(20):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Quiz(30)]' derivation='Avg' name='[avg:Quiz(30):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total]' derivation='Avg' name='[avg:Total:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CourseId]' derivation='None' name='[none:CourseId:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Assignment:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:EndTerm(30):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:LabTest:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:MidTerm(20):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Project(20):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Quiz(30):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Total:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Total:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:EndTerm(30):qk]&quot;</bucket>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:MidTerm(20):qk]&quot;</bucket>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Quiz(30):qk]&quot;</bucket>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Project(20):qk]&quot;</bucket>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:LabTest:qk]&quot;</bucket>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Assignment:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0jqbu3w1m1stte167emyb0x9kq5r].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:MidTerm(20):qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0jqbu3w1m1stte167emyb0x9kq5r].[Multiple Values]</rows>
+        <cols>([federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:CourseId:ok] / [federated.0jqbu3w1m1stte167emyb0x9kq5r].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{983C4D44-FBCD-4F21-887B-2D63BAEA3D39}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{50F4C7B3-BE00-4EA5-B532-520991EB011C}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Story 1' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='4357' id='3' type='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='5187' />
+            <zone h='83506' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='15664'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{A47CBF13-2946-4AD9-AC14-2A143B6695C6}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[:Measure Names]' show-morefewerbutton='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:CourseId:ok]</field>
+            <field>[federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:StudentKey:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DF3CF20F-FE78-45B4-BF63-A0AEA9DA343A}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B406B803-2E6C-4349-A6CE-533DCDF229F1}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{FA03D22B-7E32-4ABE-9771-30D1ACEC24AC}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

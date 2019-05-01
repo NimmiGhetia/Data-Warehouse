@@ -1,0 +1,1739 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0321.1733                               -->
+<workbook original-version='18.1' source-build='2019.1.2 (20191.19.0321.1733)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Academics' inline='true' name='federated.0jqbu3w1m1stte167emyb0x9kq5r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Academics' name='textscan.142moi21hnxk5f1a8ak6f02nodqh'>
+            <connection class='textscan' directory='D:/bits/sem2/data warehousing/MihikaDWProjct-20190421T191343Z-001/FactTablesFinal/Acads/output' filename='Academics.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Attendance' name='textscan.0dkyi2u07ffxbe133drv30rkn0gd'>
+            <connection class='textscan' directory='D:/bits/sem2/data warehousing/MihikaDWProjct-20190421T191343Z-001/FactTablesFinal/Attendance/output' filename='Attendance.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[Academics.csv].[StudentKey]' />
+                <expression op='[Attendance.csv].[StudentId]' />
+              </expression>
+              <expression op='='>
+                <expression op='[Academics.csv].[COURSE NO.]' />
+                <expression op='[Attendance.csv].[CourseKey]' />
+              </expression>
+            </expression>
+          </clause>
+          <relation connection='textscan.142moi21hnxk5f1a8ak6f02nodqh' name='Academics.csv' table='[Academics#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='integer' name='StudentKey' ordinal='0' />
+              <column datatype='integer' name='Assignment' ordinal='1' />
+              <column datatype='integer' name='LabTest' ordinal='2' />
+              <column datatype='integer' name='Project(20)' ordinal='3' />
+              <column datatype='integer' name='Quiz(30)' ordinal='4' />
+              <column datatype='integer' name='MidTerm(20)' ordinal='5' />
+              <column datatype='integer' name='EndTerm(30)' ordinal='6' />
+              <column datatype='integer' name='Total' ordinal='7' />
+              <column datatype='integer' name='CourseId' ordinal='8' />
+              <column datatype='date' name='SemesterKey' ordinal='9' />
+              <column datatype='integer' name='ID' ordinal='10' />
+              <column datatype='integer' name='YearOfJoining' ordinal='11' />
+              <column datatype='string' name='StudentName' ordinal='12' />
+              <column datatype='string' name='Gender' ordinal='13' />
+              <column datatype='string' name='Degree' ordinal='14' />
+              <column datatype='string' name='StudId' ordinal='15' />
+              <column datatype='date' name='date_key' ordinal='16' />
+              <column datatype='date' name='date' ordinal='17' />
+              <column datatype='string' name='day_of_week' ordinal='18' />
+              <column datatype='integer' name='day_number_in_month' ordinal='19' />
+              <column datatype='integer' name='day_number_overall' ordinal='20' />
+              <column datatype='integer' name='week_number_in_year' ordinal='21' />
+              <column datatype='integer' name='week_number_overall' ordinal='22' />
+              <column datatype='string' name='Month' ordinal='23' />
+              <column datatype='integer' name='quarter' ordinal='24' />
+              <column datatype='string' name='fiscal_period' ordinal='25' />
+              <column datatype='integer' name='year' ordinal='26' />
+              <column datatype='string' name='holiday_flag' ordinal='27' />
+              <column datatype='integer' name='COURSE NO.' ordinal='28' />
+              <column datatype='date' name='COMPRE DATE' ordinal='29' />
+              <column datatype='string' name='COMPRE SESSION' ordinal='30' />
+              <column datatype='string' name='COURSE TITLE' ordinal='31' />
+              <column datatype='integer' name='CREDIT' ordinal='32' />
+              <column datatype='string' name='Instructor' ordinal='33' />
+              <column datatype='string' name='Days' ordinal='34' />
+              <column datatype='string' name='Department' ordinal='35' />
+              <column datatype='string' name='Resource Material' ordinal='36' />
+              <column datatype='string' name='Author' ordinal='37' />
+              <column datatype='string' name='Edition' ordinal='38' />
+              <column datatype='integer' name='No Of Components' ordinal='39' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0dkyi2u07ffxbe133drv30rkn0gd' name='Attendance.csv' table='[Attendance#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='DateID' ordinal='0' />
+              <column datatype='integer' name='Room' ordinal='1' />
+              <column datatype='integer' name='Room Number' ordinal='2' />
+              <column datatype='integer' name='Time' ordinal='3' />
+              <column datatype='integer' name='CourseKey' ordinal='4' />
+              <column datatype='date' name='date_key' ordinal='5' />
+              <column datatype='date' name='date' ordinal='6' />
+              <column datatype='string' name='day_of_week' ordinal='7' />
+              <column datatype='integer' name='day_number_in_month' ordinal='8' />
+              <column datatype='integer' name='day_number_overall' ordinal='9' />
+              <column datatype='integer' name='week_number_in_year' ordinal='10' />
+              <column datatype='integer' name='week_number_overall' ordinal='11' />
+              <column datatype='string' name='Month' ordinal='12' />
+              <column datatype='integer' name='quarter' ordinal='13' />
+              <column datatype='string' name='fiscal_period' ordinal='14' />
+              <column datatype='integer' name='year' ordinal='15' />
+              <column datatype='string' name='holiday_flag' ordinal='16' />
+              <column datatype='integer' name='Block' ordinal='17' />
+              <column datatype='integer' name='Capacity' ordinal='18' />
+              <column datatype='integer' name='Hour' ordinal='19' />
+              <column datatype='datetime' name='Start Time' ordinal='20' />
+              <column datatype='datetime' name='End Time' ordinal='21' />
+              <column datatype='integer' name='ID' ordinal='22' />
+              <column datatype='integer' name='YearOfJoining' ordinal='23' />
+              <column datatype='string' name='StudentName' ordinal='24' />
+              <column datatype='string' name='Gender' ordinal='25' />
+              <column datatype='string' name='Degree' ordinal='26' />
+              <column datatype='string' name='StudId' ordinal='27' />
+              <column datatype='integer' name='StudentId' ordinal='28' />
+              <column datatype='integer' name='COURSE NO.' ordinal='29' />
+              <column datatype='date' name='COMPRE DATE' ordinal='30' />
+              <column datatype='string' name='COMPRE SESSION' ordinal='31' />
+              <column datatype='string' name='COURSE TITLE' ordinal='32' />
+              <column datatype='integer' name='CREDIT' ordinal='33' />
+              <column datatype='string' name='Instructor' ordinal='34' />
+              <column datatype='string' name='Days' ordinal='35' />
+              <column datatype='string' name='Department' ordinal='36' />
+              <column datatype='string' name='Resource Material' ordinal='37' />
+              <column datatype='string' name='Author' ordinal='38' />
+              <column datatype='string' name='Edition' ordinal='39' />
+              <column datatype='integer' name='No Of Components' ordinal='40' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[Assignment]' value='[Academics.csv].[Assignment]' />
+          <map key='[Author (Attendance.csv)]' value='[Attendance.csv].[Author]' />
+          <map key='[Author]' value='[Academics.csv].[Author]' />
+          <map key='[Block]' value='[Attendance.csv].[Block]' />
+          <map key='[COMPRE DATE (Attendance.csv)]' value='[Attendance.csv].[COMPRE DATE]' />
+          <map key='[COMPRE DATE]' value='[Academics.csv].[COMPRE DATE]' />
+          <map key='[COMPRE SESSION (Attendance.csv)]' value='[Attendance.csv].[COMPRE SESSION]' />
+          <map key='[COMPRE SESSION]' value='[Academics.csv].[COMPRE SESSION]' />
+          <map key='[COURSE NO. (Attendance.csv)]' value='[Attendance.csv].[COURSE NO.]' />
+          <map key='[COURSE NO.]' value='[Academics.csv].[COURSE NO.]' />
+          <map key='[COURSE TITLE (Attendance.csv)]' value='[Attendance.csv].[COURSE TITLE]' />
+          <map key='[COURSE TITLE]' value='[Academics.csv].[COURSE TITLE]' />
+          <map key='[CREDIT (Attendance.csv)]' value='[Attendance.csv].[CREDIT]' />
+          <map key='[CREDIT]' value='[Academics.csv].[CREDIT]' />
+          <map key='[Capacity]' value='[Attendance.csv].[Capacity]' />
+          <map key='[CourseId]' value='[Academics.csv].[CourseId]' />
+          <map key='[CourseKey]' value='[Attendance.csv].[CourseKey]' />
+          <map key='[DateID]' value='[Attendance.csv].[DateID]' />
+          <map key='[Days (Attendance.csv)]' value='[Attendance.csv].[Days]' />
+          <map key='[Days]' value='[Academics.csv].[Days]' />
+          <map key='[Degree (Attendance.csv)]' value='[Attendance.csv].[Degree]' />
+          <map key='[Degree]' value='[Academics.csv].[Degree]' />
+          <map key='[Department (Attendance.csv)]' value='[Attendance.csv].[Department]' />
+          <map key='[Department]' value='[Academics.csv].[Department]' />
+          <map key='[Edition (Attendance.csv)]' value='[Attendance.csv].[Edition]' />
+          <map key='[Edition]' value='[Academics.csv].[Edition]' />
+          <map key='[End Time]' value='[Attendance.csv].[End Time]' />
+          <map key='[EndTerm(30)]' value='[Academics.csv].[EndTerm(30)]' />
+          <map key='[Gender (Attendance.csv)]' value='[Attendance.csv].[Gender]' />
+          <map key='[Gender]' value='[Academics.csv].[Gender]' />
+          <map key='[Hour]' value='[Attendance.csv].[Hour]' />
+          <map key='[ID (Attendance.csv)]' value='[Attendance.csv].[ID]' />
+          <map key='[ID]' value='[Academics.csv].[ID]' />
+          <map key='[Instructor (Attendance.csv)]' value='[Attendance.csv].[Instructor]' />
+          <map key='[Instructor]' value='[Academics.csv].[Instructor]' />
+          <map key='[LabTest]' value='[Academics.csv].[LabTest]' />
+          <map key='[MidTerm(20)]' value='[Academics.csv].[MidTerm(20)]' />
+          <map key='[Month (Attendance.csv)]' value='[Attendance.csv].[Month]' />
+          <map key='[Month]' value='[Academics.csv].[Month]' />
+          <map key='[No Of Components (Attendance.csv)]' value='[Attendance.csv].[No Of Components]' />
+          <map key='[No Of Components]' value='[Academics.csv].[No Of Components]' />
+          <map key='[Project(20)]' value='[Academics.csv].[Project(20)]' />
+          <map key='[Quiz(30)]' value='[Academics.csv].[Quiz(30)]' />
+          <map key='[Resource Material (Attendance.csv)]' value='[Attendance.csv].[Resource Material]' />
+          <map key='[Resource Material]' value='[Academics.csv].[Resource Material]' />
+          <map key='[Room Number]' value='[Attendance.csv].[Room Number]' />
+          <map key='[Room]' value='[Attendance.csv].[Room]' />
+          <map key='[SemesterKey]' value='[Academics.csv].[SemesterKey]' />
+          <map key='[Start Time]' value='[Attendance.csv].[Start Time]' />
+          <map key='[StudId (Attendance.csv)]' value='[Attendance.csv].[StudId]' />
+          <map key='[StudId]' value='[Academics.csv].[StudId]' />
+          <map key='[StudentId]' value='[Attendance.csv].[StudentId]' />
+          <map key='[StudentKey]' value='[Academics.csv].[StudentKey]' />
+          <map key='[StudentName (Attendance.csv)]' value='[Attendance.csv].[StudentName]' />
+          <map key='[StudentName]' value='[Academics.csv].[StudentName]' />
+          <map key='[Time]' value='[Attendance.csv].[Time]' />
+          <map key='[Total]' value='[Academics.csv].[Total]' />
+          <map key='[YearOfJoining (Attendance.csv)]' value='[Attendance.csv].[YearOfJoining]' />
+          <map key='[YearOfJoining]' value='[Academics.csv].[YearOfJoining]' />
+          <map key='[date (Attendance.csv)]' value='[Attendance.csv].[date]' />
+          <map key='[date]' value='[Academics.csv].[date]' />
+          <map key='[date_key (Attendance.csv)]' value='[Attendance.csv].[date_key]' />
+          <map key='[date_key]' value='[Academics.csv].[date_key]' />
+          <map key='[day_number_in_month (Attendance.csv)]' value='[Attendance.csv].[day_number_in_month]' />
+          <map key='[day_number_in_month]' value='[Academics.csv].[day_number_in_month]' />
+          <map key='[day_number_overall (Attendance.csv)]' value='[Attendance.csv].[day_number_overall]' />
+          <map key='[day_number_overall]' value='[Academics.csv].[day_number_overall]' />
+          <map key='[day_of_week (Attendance.csv)]' value='[Attendance.csv].[day_of_week]' />
+          <map key='[day_of_week]' value='[Academics.csv].[day_of_week]' />
+          <map key='[fiscal_period (Attendance.csv)]' value='[Attendance.csv].[fiscal_period]' />
+          <map key='[fiscal_period]' value='[Academics.csv].[fiscal_period]' />
+          <map key='[holiday_flag (Attendance.csv)]' value='[Attendance.csv].[holiday_flag]' />
+          <map key='[holiday_flag]' value='[Academics.csv].[holiday_flag]' />
+          <map key='[quarter (Attendance.csv)]' value='[Attendance.csv].[quarter]' />
+          <map key='[quarter]' value='[Academics.csv].[quarter]' />
+          <map key='[week_number_in_year (Attendance.csv)]' value='[Attendance.csv].[week_number_in_year]' />
+          <map key='[week_number_in_year]' value='[Academics.csv].[week_number_in_year]' />
+          <map key='[week_number_overall (Attendance.csv)]' value='[Attendance.csv].[week_number_overall]' />
+          <map key='[week_number_overall]' value='[Academics.csv].[week_number_overall]' />
+          <map key='[year (Attendance.csv)]' value='[Attendance.csv].[year]' />
+          <map key='[year]' value='[Academics.csv].[year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StudentKey</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[StudentKey]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>StudentKey</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Assignment</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Assignment]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Assignment</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LabTest</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LabTest]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>LabTest</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Project(20)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Project(20)]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Project(20)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quiz(30)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quiz(30)]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Quiz(30)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MidTerm(20)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MidTerm(20)]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>MidTerm(20)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EndTerm(30)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[EndTerm(30)]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>EndTerm(30)</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Total</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CourseId</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CourseId]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>CourseId</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SemesterKey</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[SemesterKey]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>SemesterKey</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YearOfJoining</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[YearOfJoining]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>YearOfJoining</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StudentName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StudentName]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>StudentName</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Degree</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Degree]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Degree</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StudId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StudId]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>StudId</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_key</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date_key]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>date_key</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[day_of_week]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>day_of_week</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_number_in_month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day_number_in_month]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>day_number_in_month</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_number_overall</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day_number_overall]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>day_number_overall</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>week_number_in_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[week_number_in_year]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>week_number_in_year</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>week_number_overall</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[week_number_overall]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>week_number_overall</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Month]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quarter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[quarter]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>quarter</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fiscal_period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fiscal_period]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>fiscal_period</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>holiday_flag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[holiday_flag]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>holiday_flag</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COURSE NO.</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[COURSE NO.]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>COURSE NO.</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COMPRE DATE</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[COMPRE DATE]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>COMPRE DATE</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COMPRE SESSION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COMPRE SESSION]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>COMPRE SESSION</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COURSE TITLE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COURSE TITLE]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>COURSE TITLE</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CREDIT</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CREDIT]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>CREDIT</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Instructor</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Instructor]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Instructor</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Days]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Days</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Department</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Department]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Department</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Resource Material</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Resource Material]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Resource Material</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Author</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Author]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Author</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Edition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Edition]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>Edition</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>No Of Components</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[No Of Components]</local-name>
+            <parent-name>[Academics.csv]</parent-name>
+            <remote-alias>No Of Components</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DateID</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[DateID]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>DateID</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Room</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Room]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Room</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Room Number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Room Number]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Room Number</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Time</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Time]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Time</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CourseKey</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CourseKey]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>CourseKey</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date_key</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date_key (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>date_key</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[day_of_week (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>day_of_week</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_number_in_month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day_number_in_month (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>day_number_in_month</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_number_overall</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day_number_overall (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>day_number_overall</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>week_number_in_year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[week_number_in_year (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>week_number_in_year</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>week_number_overall</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[week_number_overall (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>week_number_overall</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Month</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Month (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Month</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>quarter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[quarter (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>quarter</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fiscal_period</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fiscal_period (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>fiscal_period</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>holiday_flag</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[holiday_flag (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>holiday_flag</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Block</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Block]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Block</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Capacity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Capacity]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Capacity</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hour</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Hour]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Hour</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Start Time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Start Time]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Start Time</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>End Time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[End Time]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>End Time</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YearOfJoining</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[YearOfJoining (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>YearOfJoining</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StudentName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StudentName (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>StudentName</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Degree</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Degree (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Degree</remote-alias>
+            <ordinal>66</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StudId</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[StudId (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>StudId</remote-alias>
+            <ordinal>67</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>StudentId</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[StudentId]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>StudentId</remote-alias>
+            <ordinal>68</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COURSE NO.</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[COURSE NO. (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>COURSE NO.</remote-alias>
+            <ordinal>69</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COMPRE DATE</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[COMPRE DATE (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>COMPRE DATE</remote-alias>
+            <ordinal>70</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COMPRE SESSION</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COMPRE SESSION (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>COMPRE SESSION</remote-alias>
+            <ordinal>71</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COURSE TITLE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COURSE TITLE (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>COURSE TITLE</remote-alias>
+            <ordinal>72</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CREDIT</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[CREDIT (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>CREDIT</remote-alias>
+            <ordinal>73</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Instructor</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Instructor (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Instructor</remote-alias>
+            <ordinal>74</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Days</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Days (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Days</remote-alias>
+            <ordinal>75</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Department</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Department (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Department</remote-alias>
+            <ordinal>76</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Resource Material</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Resource Material (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Resource Material</remote-alias>
+            <ordinal>77</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Author</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Author (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Author</remote-alias>
+            <ordinal>78</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Edition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Edition (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>Edition</remote-alias>
+            <ordinal>79</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>No Of Components</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[No Of Components (Attendance.csv)]</local-name>
+            <parent-name>[Attendance.csv]</parent-name>
+            <remote-alias>No Of Components</remote-alias>
+            <ordinal>80</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Assignment]' role='measure' type='quantitative' />
+      <column caption='Compre Date' datatype='date' name='[COMPRE DATE]' role='dimension' type='ordinal' />
+      <column caption='Compre Session' datatype='string' name='[COMPRE SESSION]' role='dimension' type='nominal' />
+      <column caption='Course No.' datatype='integer' name='[COURSE NO.]' role='measure' type='quantitative' />
+      <column caption='Course Title' datatype='string' name='[COURSE TITLE]' role='dimension' type='nominal' />
+      <column caption='Credit' datatype='integer' name='[CREDIT]' role='measure' type='quantitative' />
+      <column caption='Course Id' datatype='integer' name='[CourseId]' role='dimension' type='ordinal' />
+      <column caption='Course Key' datatype='integer' name='[CourseKey]' role='dimension' type='ordinal' />
+      <column caption='Date ID' datatype='date' name='[DateID]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[EndTerm(30)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[ID (Attendance.csv)]' role='dimension' type='ordinal' />
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column caption='Lab Test' datatype='integer' name='[LabTest]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[MidTerm(20)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Project(20)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Quiz(30)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Room Number]' role='dimension' type='ordinal' />
+      <column caption='Semester Key' datatype='date' name='[SemesterKey]' role='dimension' type='ordinal' />
+      <column caption='Stud Id' datatype='string' name='[StudId]' role='dimension' type='nominal' />
+      <column caption='Student Id' datatype='integer' name='[StudentId]' role='dimension' type='ordinal' />
+      <column caption='Student Key' datatype='integer' name='[StudentKey]' role='dimension' type='ordinal' />
+      <column caption='Student Name' datatype='string' name='[StudentName]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Total]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[YearOfJoining (Attendance.csv)]' role='dimension' type='quantitative' />
+      <column caption='Year Of Joining' datatype='integer' name='[YearOfJoining]' role='dimension' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='date key (Attendance.csv)' datatype='date' name='[date_key (Attendance.csv)]' role='dimension' type='ordinal' />
+      <column caption='Date Key' datatype='date' name='[date_key]' role='dimension' type='ordinal' />
+      <column caption='day number in month (Attendance.csv)' datatype='integer' name='[day_number_in_month (Attendance.csv)]' role='dimension' type='quantitative' />
+      <column caption='Day Number In Month' datatype='integer' name='[day_number_in_month]' role='dimension' type='quantitative' />
+      <column caption='day number overall (Attendance.csv)' datatype='integer' name='[day_number_overall (Attendance.csv)]' role='dimension' type='quantitative' />
+      <column caption='Day Number Overall' datatype='integer' name='[day_number_overall]' role='dimension' type='quantitative' />
+      <column caption='day of week (Attendance.csv)' datatype='string' name='[day_of_week (Attendance.csv)]' role='dimension' type='nominal' />
+      <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+      <column caption='fiscal period (Attendance.csv)' datatype='string' name='[fiscal_period (Attendance.csv)]' role='dimension' type='nominal' />
+      <column caption='Fiscal Period' datatype='string' name='[fiscal_period]' role='dimension' type='nominal' />
+      <column caption='holiday flag (Attendance.csv)' datatype='string' name='[holiday_flag (Attendance.csv)]' role='dimension' type='nominal' />
+      <column caption='Holiday Flag' datatype='string' name='[holiday_flag]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[quarter (Attendance.csv)]' role='dimension' type='quantitative' />
+      <column caption='Quarter' datatype='integer' name='[quarter]' role='dimension' type='quantitative' />
+      <column caption='week number in year (Attendance.csv)' datatype='integer' name='[week_number_in_year (Attendance.csv)]' role='dimension' type='quantitative' />
+      <column caption='Week Number In Year' datatype='integer' name='[week_number_in_year]' role='dimension' type='quantitative' />
+      <column caption='week number overall (Attendance.csv)' datatype='integer' name='[week_number_overall (Attendance.csv)]' role='dimension' type='quantitative' />
+      <column caption='Week Number Overall' datatype='integer' name='[week_number_overall]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[year (Attendance.csv)]' role='dimension' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[Total]' derivation='Attribute' name='[attr:Total:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Assignment]' derivation='Avg' name='[avg:Assignment:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[EndTerm(30)]' derivation='Avg' name='[avg:EndTerm(30):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[LabTest]' derivation='Avg' name='[avg:LabTest:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MidTerm(20)]' derivation='Avg' name='[avg:MidTerm(20):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Project(20)]' derivation='Avg' name='[avg:Project(20):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Quiz(30)]' derivation='Avg' name='[avg:Quiz(30):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total]' derivation='Avg' name='[avg:Total:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ID]' derivation='Count' name='[cnt:ID:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total]' derivation='Min' name='[min:Total:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[EndTerm(30)]' derivation='Sum' name='[sum:EndTerm(30):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MidTerm(20)]' derivation='Sum' name='[sum:MidTerm(20):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Project(20)]' derivation='Sum' name='[sum:Project(20):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Quiz(30)]' derivation='Sum' name='[sum:Quiz(30):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Total]' derivation='Sum' name='[sum:Total:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.145251' measure-ordering='alphabetic' measure-percentage='0.854749' rowDisplayCount='2000' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:LabTest:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[cnt:ID:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Project(20):qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[sum:Project(20):qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:EndTerm(30):qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[sum:EndTerm(30):qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[attr:Total:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Total:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[min:Total:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[sum:Total:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Assignment:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:Quiz(30):qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[sum:Quiz(30):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[avg:MidTerm(20):qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0jqbu3w1m1stte167emyb0x9kq5r].[sum:MidTerm(20):qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Academics' name='federated.0jqbu3w1m1stte167emyb0x9kq5r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jqbu3w1m1stte167emyb0x9kq5r'>
+            <column caption='Course Title' datatype='string' name='[COURSE TITLE]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+            <column caption='Student Id' datatype='integer' name='[StudentId]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Total]' role='measure' type='quantitative' />
+            <column-instance column='[Total]' derivation='Attribute' name='[attr:Total:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[ID]' derivation='Count' name='[cnt:ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[COURSE TITLE]' derivation='None' name='[none:COURSE TITLE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[StudentId]' derivation='None' name='[none:StudentId:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[attr:Total:qk]' value='128' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:StudentId:ok]' value='22' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:StudentId:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[cnt:ID:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:StudentId:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[attr:Total:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:StudentId:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0jqbu3w1m1stte167emyb0x9kq5r].[cnt:ID:qk] + [federated.0jqbu3w1m1stte167emyb0x9kq5r].[attr:Total:qk])</rows>
+        <cols>([federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:COURSE TITLE:nk] / [federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:StudentId:ok])</cols>
+      </table>
+      <simple-id uuid='{846699DA-A701-495F-ADC0-3FCA850512F2}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='116'>
+            <card pane-specification-id='1' param='[federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:StudentId:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:COURSE TITLE:nk]</field>
+            <field>[federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:ID:ok]</field>
+            <field>[federated.0jqbu3w1m1stte167emyb0x9kq5r].[none:StudentId:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7977FD2E-61DA-4FDE-91C4-DBC95C95FF25}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      mZyWjqIobNy4kebmZiZPnsyoUaPYtGkT6enpLFmypM8yAl14w4rzGA1LTU3l1VdfxWw2M3/+
+      fARBICcnJ+TjP/30U+bMmcPUqVNRVZWlS5fi8/l4/fXXefDBB+FkIfgJikJ0OkRloNPpuP/+
+      +3s29xKA7PPw9j+epeGsG991q9aSl963F4eEjEzKPyvjYIeZyLgshPYa9pfux6mzYBYEBL0e
+      nU6HTqcjMzOT+++/n9bWVp544gl0Oh1er5fCwkJaW1uJDPDxRxCEAfOlo9MHfiTrdDr0ej1d
+      XV2UlJTw0EMPIQgCH3/8MV/72tf4wx/+wLx584J+xNLr9eh1getypgxVVXn++ecRRZHc3Fwm
+      TZrEc889x0033dTTXQyGPkjXQjhdhhAgituZ9g7WPdHp9ej1elwuF8888wwJCQnMnz8fo9HI
+      c889x0MPPYTVakVVVe655x4MBgO/+MUveO+990hMTKSsrIz9+/czb968Pusya9YsSktLWbdu
+      HY888ghVVVWsW7eOu+66q/u6qNkEip9F+tlfgdhR2NxNOHxfXNy9BKATjdyw6rtIsoLH60FV
+      ITrO2qdhAHpzHPPnzaLLIxMdHQlKIvZOJxFR0b2a9/jx4/ztb3/D6/WycuVK5syZQ2NjI9HR
+      0SQlJeEKqcTuL5xNTU2kpaXR3NyM2+0mIyNj4ESi0xEfH8/DDz9Mfn4+y5YtY8eOHZjN5rC5
+      fpEkieLiYn7yk5+QlpZGRUUFiqLQ1NQUkgAGirq6OjweD1dffTWZmZls376d1tZWvF4vVqsV
+      WZZ54oknsFgsJCQkcO+99yIIAp2dncycOTOkMpKSkli5ciVOp5P6+nqmT5/Ob3/7W373u99x
+      5ZVX9nl8YctnlLV+4aamlwAEQSAiKpqP//UP9hysI8Js4rpb7mZiCE8AAKPZitF8+ofeQGxs
+      rN/9cnJyer1QpqSkcMcdd4RUzhn+8Y9/sHHjRp544gn+8pe/kJaWRkZGBjfffPN55XOhmM1m
+      7r77btxuN7/97W8xGo00Njbys5/9LCwvddD9pLj11lvZuXMnJ06c4Cc/+cmAfxEPhfT0dObP
+      n89bb71FdnY2K1as4P33v+jGiqLIz3/+817H3XfffSGXUVNTQ2FhIYIgkJqayvPPP4/RaGT5
+      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
+      0+dO5f8HlhVLQAawxfsAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
